@@ -1,4 +1,5 @@
 import loteria.Aposta;
+import loteria.Sorteio;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -8,6 +9,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in) ;
+        Sorteio sorteio = new Sorteio() ;
         Aposta primeiroApostador , segundoApostador , terceiroApostador ;
         primeiroApostador = new Aposta();
         segundoApostador = new Aposta();
@@ -31,9 +33,12 @@ public class Main {
             temp = sc.nextInt() ;
             primeiroApostador.adicionarNumero(i , temp);
         }
+        primeiroApostador.quantidadeDeAcertos(sorteio);
 
-        System.out.println(Arrays.toString(primeiroApostador.getNumerosAposta()));
+        System.out.println("Numeros do Sorteio\n"+ Arrays.toString(sorteio.getNumerosSorteados()));
+        System.out.println("Numeros Apostador 1\n"+Arrays.toString(primeiroApostador.getNumerosAposta()));
 
+        System.out.println("quantidade de acertos: " + primeiroApostador.getAcertos() ) ;
 
 
 

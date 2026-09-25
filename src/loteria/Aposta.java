@@ -48,6 +48,24 @@ public class Aposta {
             return false ;
     }
 
+    public void quantidadeDeAcertos(Sorteio sorteio){
+
+        // pegar numero por numero do sorteio
+        // verificar se o numero tem no meus numeros sorteados
+        // se tem acrescento 1 acerto
+        // se não tem nada muda
+        // no fim vou ter o numero total de acertos
+        int acertos = 0 ;
+        int[] numerosDoSorteio = sorteio.getNumerosSorteados() ;
+        for(int i = 0 ; i < numerosDoSorteio.length ; i++){
+            if( validaIqualdade(numerosDoSorteio[i]) ){
+                acertos++ ;
+            }
+        }
+
+        this.acertos = acertos ;
+    }
+
 
     public void setNome(String nome) {
         this.nome = nome;
