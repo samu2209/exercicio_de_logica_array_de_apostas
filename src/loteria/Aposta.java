@@ -29,11 +29,9 @@ public class Aposta {
             throw new ApostaException("Não pode ser usado numero Superior a 99 para aposta");
         }
         boolean igualdade = validaIqualdade(numeroAposta) ;
-
         if (igualdade){
             throw new ApostaException("Não Pode Ser usado numero Igual Para mesma Aposta") ;
         }
-
         return true ;
 
     }
