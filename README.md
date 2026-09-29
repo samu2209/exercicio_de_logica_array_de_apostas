@@ -4,11 +4,11 @@
 
 Desenvolva um programa em Java que simule um pequeno sistema de apostas de loteria.
 
-O sistema deverá permitir o cadastro de **3 apostas**, realizar um sorteio com **5 números** e, ao final, comparar cada aposta com o resultado sorteado, informando a quantidade de acertos de cada participante.
+O sistema deverá permitir o cadastro de **(n) apostas**, realizar um sorteio com **5 números** e, ao final, comparar cada aposta com o resultado sorteado, informando a quantidade de acertos de cada participante.
 
 O objetivo deste projeto é praticar conceitos fundamentais de Java, principalmente **arrays, estruturas de repetição, condicionais, métodos, validação de dados, geração de números aleatórios, classes e objetos**.
 
-> **Restrição:** neste projeto não devem ser utilizadas Collections (`ArrayList`, `HashSet`, `HashMap` etc.) ou recursos mais avançados da linguagem. Resolva o problema utilizando principalmente arrays e os conceitos já estudados.
+> **Restrição:** neste projeto não devem ser utilizadas Collections (`ArrayList`, `HashSet`, `HashMap` etc.) ou recursos mais avançados da linguagem.
 
 ---
 
@@ -16,7 +16,7 @@ O objetivo deste projeto é praticar conceitos fundamentais de Java, principalme
 
 ## 1. Cadastro das apostas
 
-O sistema deverá permitir o cadastro de **3 apostas**.
+O sistema deverá permitir o cadastro de **(n) apostas**.
 
 Para cada aposta, o usuário deverá informar:
 
@@ -168,17 +168,14 @@ Ao final da execução, o programa deverá apresentar:
 Aposta 1
 Apostador: João
 Números: 10 - 25 - 33 - 50 - 91
-Acertos: 3
 
 Aposta 2
 Apostador: Maria
 Números: 05 - 25 - 42 - 67 - 70
-Acertos: 3
 
 Aposta 3
 Apostador: Carlos
 Números: 10 - 20 - 30 - 40 - 50
-Acertos: 1
 ```
 
 ---
@@ -352,7 +349,7 @@ A forma como essas responsabilidades serão organizadas faz parte do desafio.
 
 O projeto será considerado concluído quando for capaz de:
 
-* [ ] Cadastrar 3 apostas;
+* [ ] Cadastrar (n) apostas;
 * [ ] Cadastrar o nome de cada apostador;
 * [ ] Permitir apostas de 5, 6 ou 7 números;
 * [ ] Validar a quantidade escolhida;

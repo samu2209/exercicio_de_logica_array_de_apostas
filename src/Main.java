@@ -16,13 +16,9 @@ public class Main {
         Aposta aposta ;
         String nomeApostanteTemp;
 
-        // eu vou fazer um array com as apostas e vou definir a quantidade de apostas que vou fazer no inicio do programa
 
 
         quantidadeDeApostas = lerInteiro(sc , "digite a quantidade de apostas que vão ser criadas") ;
-
-
-        // criar validação
 
         arrayDeApostas = new Aposta[quantidadeDeApostas] ;
 
@@ -78,26 +74,19 @@ public class Main {
         }
 
 
+        for (int i = 0 ; i < arrayDeApostas.length ; i++){
 
-        System.out.println("Os numeros sorteados foram\n" + Arrays.toString(sorteio.getNumerosSorteados()));
-        System.out.println("-".repeat(50));
-
-
-
-        for( int i = 0  ; i < arrayDeApostas.length ; i++){
-            arrayDeApostas[i].quantidadeDeAcertos(sorteio);
-            String nome = arrayDeApostas[i].getNome();
-            int[] numeroDeAposta = arrayDeApostas[i].getNumerosAposta() ;
-
-
-
-            System.out.println("Apostador Numero " + (i+1)) ;
-            System.out.println("nome: " + nome);
-            System.out.println("numeros apostados: " + Arrays.toString(numeroDeAposta));
-            System.out.println("total de acertos: " + arrayDeApostas[i].getAcertos());
+            System.out.println("Aposta " + (i+1));
+            System.out.println("Apostante: "+ arrayDeApostas[i].getNome());
+            System.out.println("Numeros Apostados: "+Arrays.toString(arrayDeApostas[i].getNumerosAposta()));
             System.out.println("-".repeat(50));
 
         }
+
+
+        System.out.println(" ");
+        System.out.println("Os numeros sorteados foram\n" + Arrays.toString(sorteio.getNumerosSorteados()));
+        System.out.println("-".repeat(50));
 
 
         sorteio.definirVencedor(arrayDeApostas);
@@ -131,4 +120,6 @@ public class Main {
         }while (validar) ;
         return  valor ;
     }
+
+
 }

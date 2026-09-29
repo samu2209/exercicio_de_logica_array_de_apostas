@@ -46,17 +46,12 @@ public class Aposta {
             return false ;
     }
 
-    public void quantidadeDeAcertos(Sorteio sorteio){
+    protected void quantidadeDeAcertos(int[] numerosSorteio){
 
-        // pegar numero por numero do sorteio
-        // verificar se o numero tem no meus numeros sorteados
-        // se tem acrescento 1 acerto
-        // se não tem nada muda
-        // no fim vou ter o numero total de acertos
         int acertos = 0 ;
-        int[] numerosDoSorteio = sorteio.getNumerosSorteados() ;
-        for(int i = 0 ; i < numerosDoSorteio.length ; i++){
-            if( validaIqualdade(numerosDoSorteio[i]) ){
+
+        for(int i = 0 ; i < numerosSorteio.length ; i++){
+            if( validaIqualdade(numerosSorteio[i]) ){
                 acertos++ ;
             }
         }
@@ -77,7 +72,7 @@ public class Aposta {
         return numerosAposta;
     }
 
-    public int getAcertos() {
+    protected int getAcertos() {
         return acertos;
     }
 }

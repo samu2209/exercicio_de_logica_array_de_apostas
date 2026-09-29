@@ -38,8 +38,17 @@ public class Sorteio {
         return numerosSorteados;
     }
 
+    public void gerarQtAcertos(Aposta[] apostas){
+        for (int i = 0 ; i < apostas.length ; i++ ){
+            apostas[i].quantidadeDeAcertos(numerosSorteados);
+        }
+    }
+
 
     public void definirVencedor(Aposta[] apostas){
+
+
+        gerarQtAcertos(apostas);
 
         int acertos ;
         int maiorQtAcertos = 0 , apostasVencedoras = 0  ;
@@ -70,7 +79,7 @@ public class Sorteio {
         System.out.println("vencedores com " + maiorQtAcertos + " acertos são: ");
         System.out.println("-".repeat(50));
         for (int i = 0 ; i < vencedores.length ; i++){
-            System.out.println("vencedor "+ i + 1);
+            System.out.println("vencedor "+ (i + 1));
             System.out.println(vencedores[i].getNome());
             System.out.println(Arrays.toString(vencedores[i].getNumerosAposta()));
             System.out.println("-".repeat(50));
